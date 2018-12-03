@@ -1,6 +1,5 @@
 import {RECEIVE_TODOS, RECEIVE_TODO } from "../actions/todo_actions";
 
-
 const initialState = {
   1: {
     id: 1,
@@ -20,7 +19,7 @@ export const todosReducer = (state = initialState, action) =>{
   switch(action.type) {
     case RECEIVE_TODOS:
       let dup = {};
-      action.todos.forEach((todo, idx) => {
+      action.todo.forEach((todo, idx) => {
         todo.id = idx + 1;
         dup[todo.id] = todo;
       });
