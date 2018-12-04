@@ -1,21 +1,6 @@
 import {RECEIVE_TODOS, RECEIVE_TODO, REMOVE_TODO } from "../actions/todo_actions";
 
-const initialState = {
-  1: {
-    id: 1,
-    title: 'wash car',
-    body: 'with soap',
-    done: false
-  },
-  2: {
-    id: 2,
-    title: 'wash dog',
-    body: 'with shampoo',
-    done: true
-  },
-};
-
-export const todosReducer = (state = initialState, action) =>{
+export const todosReducer = (state = {}, action) =>{
   switch(action.type) {
     case RECEIVE_TODOS:
       let dup = {};
@@ -25,7 +10,8 @@ export const todosReducer = (state = initialState, action) =>{
       return dup;  // [multiple todos]
     case RECEIVE_TODO:
       const {todo} = action;
-      return Object.assign(state, {[todo.id]: todo} );            // single todo
+      const temp = Object.assign(state, {[todo.id]: todo});
+      return Object.assign({}, temp);            // single todo
     case REMOVE_TODO:
       let newDup = Object.assign({}, state);
       delete newDup[action.todo.id];

@@ -9,9 +9,10 @@ class TodoList extends React.Component {
   }
 
   render() {
+    // debugger;
     return (
       <>
-      <TodoForm receiveTodo={this.props.receiveTodo} />
+      <TodoForm createTodo={this.props.createTodo} />
       <ul>
         { this.props.todos.map(todo => <TodoListItem key={todo.id} todo={todo}/>)}
       </ul>
