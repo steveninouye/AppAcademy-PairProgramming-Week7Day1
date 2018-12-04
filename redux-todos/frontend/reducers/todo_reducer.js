@@ -19,13 +19,13 @@ export const todosReducer = (state = initialState, action) =>{
   switch(action.type) {
     case RECEIVE_TODOS:
       let dup = {};
-      action.todo.forEach((todo, idx) => {
+      action.todos.forEach((todo, idx) => {
         dup[todo.id] = todo;
       });
       return dup;  // [multiple todos]
     case RECEIVE_TODO:
       const {todo} = action;
-      return Object.assign({[todo.id]: todo}, state);            // single todo
+      return Object.assign(state, {[todo.id]: todo} );            // single todo
     case REMOVE_TODO:
       let newDup = Object.assign({}, state);
       delete newDup[action.todo.id];
