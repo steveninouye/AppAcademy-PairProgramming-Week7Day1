@@ -20,14 +20,12 @@ export const todosReducer = (state = initialState, action) =>{
     case RECEIVE_TODOS:
       let dup = {};
       action.todo.forEach((todo, idx) => {
-        todo.id = idx + 1;
         dup[todo.id] = todo;
       });
       return dup;  // [multiple todos]
     case RECEIVE_TODO:
-      const nextToDoId = Object.keys(state).length + 1;
-      action.todo.id = nextToDoId;
-      return Object.assign({[nextToDoId]: action.todo}, state);            // single todo
+      const {todo} = action;
+      return Object.assign({[todo.id]: todo}, state);            // single todo
     default:
       return state;
   }
