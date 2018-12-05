@@ -1,6 +1,6 @@
 import { RECEIVE_ERRORS, CLEAR_ERRORS } from "../actions/error_actions";
 
-export const errorsReducer = (state = [], action) =>{
+export const errorsReducer = (state = [], action) => {
   switch(action.type) {
     case RECEIVE_ERRORS:
       return action.errors;

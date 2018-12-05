@@ -1,14 +1,14 @@
 export const fetchTodos = () => {
   return $.ajax({
     method: 'GET',
-    url: 'http://localhost:3000/api/todos'
+    url: '/api/todos'
   });
 };
 
 export const createTodo = (todo) => (
   $.ajax({
     method: 'POST',
-    url: 'http://localhost:3000/api/todos',
+    url: '/api/todos',
     data: {
       todo: {
         title: todo.title,
@@ -22,14 +22,14 @@ export const createTodo = (todo) => (
 export const deleteTodo = (todo) => (
   $.ajax({
     method: 'DELETE',
-    url: `http://localhost:3000/api/todos/${todo.id}`
+    url: `/api/todos/${todo.id}`
   })
 );
 
 export const patchTodo = (todo) => (
   $.ajax({
     method: 'PATCH',
-    url: `http://localhost:3000/api/todos/${todo.id}`,
+    url: `/api/todos/${todo.id}`,
     data: {
       todo: {
         done: !todo.done
