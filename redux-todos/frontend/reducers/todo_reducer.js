@@ -2,7 +2,6 @@ import {RECEIVE_TODOS, RECEIVE_TODO, REMOVE_TODO } from "../actions/todo_actions
 
 export const todosReducer = (state = {}, action) =>{
   let dup = Object.assign({}, state);
-  console.log(action);
   switch(action.type) {
     case RECEIVE_TODOS:
       let newTodos = {};

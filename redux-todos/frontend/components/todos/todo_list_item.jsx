@@ -5,6 +5,7 @@ function TodoListItem({todo, deleteTodo, updateTodo}) {
   return (
   <>
     <li>{todo.title}</li>
+
     <button onClick={ ()=> deleteTodo(todo) }>Delete</button>
     <button onClick={ ()=> updateTodo(todo) } >{isDone}</button>
   </>

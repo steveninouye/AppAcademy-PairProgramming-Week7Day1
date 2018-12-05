@@ -1,7 +1,14 @@
 class Api::TodosController < ApplicationController
   def index
-    @todos = Todo.all
-    render json: @todos
+    @todos = Todo.includes(:steps).all
+    # for each todo the key of steps:=== all the steps
+    todos = @todos.as_json
+    arr = []
+    todos.map.with_index do |todo, idx|
+      todo[:steps] = @todos[idx].steps
+      arr << todo
+    end
+    render json: arr
   end
 
   def create
