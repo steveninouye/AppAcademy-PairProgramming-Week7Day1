@@ -1,21 +1,19 @@
 import {RECEIVE_TODOS, RECEIVE_TODO, REMOVE_TODO } from "../actions/todo_actions";
 
 export const todosReducer = (state = {}, action) =>{
+  let dup = Object.assign({}, state);
+  console.log(action);
   switch(action.type) {
     case RECEIVE_TODOS:
-      let dup = {};
-      action.todos.forEach((todo, idx) => {
-        dup[todo.id] = todo;
-      });
-      return dup;  // [multiple todos]
+      let newTodos = {};
+      action.todos.forEach(todo => newTodos[todo.id] = todo);
+      return newTodos;
     case RECEIVE_TODO:
       const {todo} = action;
-      const temp = Object.assign(state, {[todo.id]: todo});
-      return Object.assign({}, temp);            // single todo
+      return Object.assign(dup, {[todo.id]: todo});            // single todo
     case REMOVE_TODO:
-      let newDup = Object.assign({}, state);
-      delete newDup[action.todo.id];
-      return newDup;
+      delete dup[action.todo.id];
+      return dup;
     default:
       return state;
   }

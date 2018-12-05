@@ -18,3 +18,22 @@ export const createTodo = (todo) => (
     }
   })
 );
+
+export const deleteTodo = (todo) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `http://localhost:3000/api/todos/${todo.id}`
+  })
+);
+
+export const patchTodo = (todo) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `http://localhost:3000/api/todos/${todo.id}`,
+    data: {
+      todo: {
+        done: !todo.done
+      }
+    }
+  })
+)

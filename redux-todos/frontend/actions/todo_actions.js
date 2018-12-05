@@ -1,4 +1,4 @@
-import { fetchTodos, createTodo } from '../util/fetch_all_todos';
+import { fetchTodos, createTodo, deleteTodo, patchTodo } from '../util/fetch_all_todos';
 import { receiveErrors, clearErrors } from './error_actions';
 export const RECEIVE_TODOS = 'RECEIVE_TODOS';
 export const RECEIVE_TODO = 'RECEIVE_TODO';
@@ -25,7 +25,6 @@ export const fetchAllTodos = () => (dispatch, getState) => (
 );
 
 export const createNewTodo = (todo) => (dispatch, getState) => {
-  console.log(todo);
   return  createTodo(todo)
   .then(todo => {
     dispatch(clearErrors());
@@ -34,6 +33,18 @@ export const createNewTodo = (todo) => (dispatch, getState) => {
   err => dispatch(receiveErrors(err.responseJSON)));
 };
 
-window.receiveTodo = receiveTodo;
-window.receiveTodos = receiveTodos;
-window.fetchAllTodos = fetchAllTodos;
+export const destroyTodo = (todo) => (dispatch, getState) => {
+  return deleteTodo(todo)
+  .then(todo => {
+    dispatch(removeTodo(todo));
+  });
+};
+
+export const updateTodo = (todo) => (dispatch, getState) => {
+  return patchTodo(todo)
+  .then(todo => {
+    dispatch(clearErrors());
+    dispatch(receiveTodo(todo));
+  },
+  err => dispatch(receiveErrors(err.responseJSON)));
+};

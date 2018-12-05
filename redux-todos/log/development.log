@@ -1013,3 +1013,4134 @@ Processing by Api::TodosController#create as JSON
 Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 2.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:28:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 740ms (Views: 728.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:28:34 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 31ms (Views: 14.3ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:32:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 806ms (Views: 793.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:32:03 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:33:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1070ms (Views: 1067.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:33:58 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2018-12-04 15:34:13 -0800
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"receiving todo ", "body"=>"now", "done"=>"false"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+  [1m[36mTodo Create (1.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "receiving todo "], ["body", "now"], ["done", false], ["created_at", "2018-12-04 23:34:13.556188"], ["updated_at", "2018-12-04 23:34:13.556188"]]
+  ↳ app/controllers/api/todos_controller.rb:9
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 26ms (Views: 0.4ms | ActiveRecord: 21.3ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2018-12-04 15:34:18 -0800
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"", "done"=>"false"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2018-12-04 15:34:29 -0800
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"clearing the errors", "body"=>"againg", "done"=>"false"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "clearing the errors"], ["body", "againg"], ["done", false], ["created_at", "2018-12-04 23:34:29.844031"], ["updated_at", "2018-12-04 23:34:29.844031"]]
+  ↳ app/controllers/api/todos_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:43:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 731ms (Views: 702.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:43:57 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 39ms (Views: 25.6ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:44:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:44:08 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:45:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 672ms (Views: 656.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:45:02 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (11.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 33ms (Views: 12.1ms | ActiveRecord: 19.9ms)
+
+
+Started DELETE "/api/todos/undefined" for 127.0.0.1 at 2018-12-04 15:45:06 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 36ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=undefined:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:45:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 706ms (Views: 695.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/todos/2" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Destroy (0.9ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/3" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/4" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Destroy (1.9ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/5" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/6" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[35m (51.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 62ms (Views: 0.7ms | ActiveRecord: 53.7ms)
+
+
+  [1m[35m (42.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 54ms (Views: 0.6ms | ActiveRecord: 46.2ms)
+
+
+Started DELETE "/api/todos/8" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/9" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"9"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Destroy (0.6ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 3.4ms)
+
+
+  [1m[35m (8.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/10" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"4"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mTodo Load (3.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (2.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Destroy (0.8ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Destroy (2.5ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 49ms (Views: 0.7ms | ActiveRecord: 17.2ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Destroy (3.3ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Destroy (0.7ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 31ms (Views: 0.8ms | ActiveRecord: 5.7ms)
+
+
+Completed 200 OK in 80ms (Views: 0.8ms | ActiveRecord: 11.8ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 53ms (Views: 0.7ms | ActiveRecord: 16.3ms)
+
+
+  [1m[36mTodo Destroy (2.4ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"11"}
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 67ms (Views: 0.7ms | ActiveRecord: 16.1ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mTodo Load (6.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Load (6.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Load (3.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  [1m[36mTodo Destroy (1.4ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  Parameters: {"id"=>"15"}
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:30
+  ↳ app/controllers/api/todos_controller.rb:31
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 200 OK in 31ms (Views: 0.8ms | ActiveRecord: 11.4ms)
+
+
+  [1m[36mTodo Destroy (1.2ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Destroy (2.1ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[35m (8.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Destroy (6.1ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Destroy (2.1ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Destroy (0.9ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 40ms (Views: 0.6ms | ActiveRecord: 23.0ms)
+
+
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 48ms (Views: 0.7ms | ActiveRecord: 32.1ms)
+
+
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 65ms (Views: 1.1ms | ActiveRecord: 32.4ms)
+
+
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 74ms (Views: 0.7ms | ActiveRecord: 33.5ms)
+
+
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Destroy (8.1ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 17]]
+Completed 200 OK in 45ms (Views: 1.1ms | ActiveRecord: 20.3ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 38ms (Views: 0.6ms | ActiveRecord: 13.0ms)
+
+
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Destroy (5.0ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 45ms (Views: 0.7ms | ActiveRecord: 8.9ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Load (5.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Destroy (0.9ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Destroy (3.7ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 22]]
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 40ms (Views: 0.8ms | ActiveRecord: 7.7ms)
+
+
+  [1m[36mTodo Load (4.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (3.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 84ms (Views: 0.7ms | ActiveRecord: 10.6ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Destroy (0.7ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Destroy (5.5ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 59ms (Views: 0.8ms | ActiveRecord: 11.7ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 61ms (Views: 0.7ms | ActiveRecord: 14.6ms)
+
+
+  [1m[36mTodo Destroy (2.8ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[35m (9.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 19ms (Views: 0.7ms | ActiveRecord: 6.3ms)
+
+
+Started DELETE "/api/todos/4" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Destroy (1.0ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/3" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 46ms (Views: 0.7ms | ActiveRecord: 14.9ms)
+
+
+  [1m[36mTodo Load (2.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/5" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"5"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"3"}
+Started DELETE "/api/todos/6" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Destroy (1.1ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/api/todos_controller.rb:31
+  [1m[36mTodo Load (1.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 25ms (ActiveRecord: 1.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=4:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (13.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 27ms (ActiveRecord: 13.4ms)
+
+
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=3:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 47ms (ActiveRecord: 0.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=5:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 90ms (Views: 0.7ms | ActiveRecord: 7.8ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"6"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+Started DELETE "/api/todos/8" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Load (3.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (8.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 25ms (ActiveRecord: 8.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=6:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mTodo Destroy (1.4ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/api/todos_controller.rb:31
+Started DELETE "/api/todos/10" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:31
+Completed 200 OK in 38ms (Views: 0.6ms | ActiveRecord: 9.8ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"10"}
+Started DELETE "/api/todos/9" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"11"}
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Load (4.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 11ms (ActiveRecord: 4.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=10:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mTodo Load (19.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 22ms (ActiveRecord: 19.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=11:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (14.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 44ms (ActiveRecord: 14.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=8:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"9"}
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=9:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (35.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 40ms (ActiveRecord: 35.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"14"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (11.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 11.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Load (15.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 15.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mTodo Load (28.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 30ms (ActiveRecord: 28.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+  [1m[36mTodo Load (15.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 23ms (ActiveRecord: 15.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mTodo Load (3.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 3.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (13.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 13.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:30 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mTodo Load (3.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 3.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (4.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 22ms (ActiveRecord: 4.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (2.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 31ms (ActiveRecord: 2.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/5" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+Started DELETE "/api/todos/4" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/6" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 2.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 22ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"5"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=5:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (18.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 21ms (ActiveRecord: 18.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=4:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+Started DELETE "/api/todos/10" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+Started DELETE "/api/todos/8" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 2.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"10"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 1.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=10:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (15.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  Parameters: {"id"=>"6"}
+Completed 404 Not Found in 19ms (ActiveRecord: 15.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=8:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/9" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (13.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 13.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=6:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"9"}
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=9:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (18.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 21ms (ActiveRecord: 18.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  Parameters: {"id"=>"11"}
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Completed 404 Not Found in 4ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 1.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=11:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mTodo Load (1.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 29ms (ActiveRecord: 1.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (12.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Completed 404 Not Found in 16ms (ActiveRecord: 12.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (6.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 13ms (ActiveRecord: 6.1ms)
+
+
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+  [1m[36mTodo Load (7.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 35ms (ActiveRecord: 7.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"22"}
+  [1m[36mTodo Load (15.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 15.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (13.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 13.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (3.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 3.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/4" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mTodo Load (2.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 10ms (ActiveRecord: 2.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTodo Load (3.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 24ms (ActiveRecord: 3.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (15.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 15.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (25.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 28ms (ActiveRecord: 25.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=4:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/5" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/6" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/10" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/8" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"8"}
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  Parameters: {"id"=>"5"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 8ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=8:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=5:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (11.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 28ms (ActiveRecord: 11.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=6:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (14.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 36ms (ActiveRecord: 14.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=10:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 2.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"14"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"11"}
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 12ms (ActiveRecord: 1.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mTodo Load (16.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 20ms (ActiveRecord: 16.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (29.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (2.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 19ms (ActiveRecord: 2.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Completed 404 Not Found in 59ms (ActiveRecord: 29.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=11:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 8ms (ActiveRecord: 1.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mTodo Load (2.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  Parameters: {"id"=>"21"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (13.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 13.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"17"}
+  [1m[36mTodo Load (24.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 27ms (ActiveRecord: 24.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mTodo Load (3.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 25ms (ActiveRecord: 3.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 1.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/4" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mTodo Load (7.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 43ms (ActiveRecord: 7.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (13.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 13.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=4:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/6" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 14ms (ActiveRecord: 1.6ms)
+
+
+Started DELETE "/api/todos/8" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"8"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 1.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=8:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/10" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  Parameters: {"id"=>"10"}
+  [1m[36mTodo Load (17.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 21ms (ActiveRecord: 17.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=6:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 19ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=10:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTodo Load (2.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 40ms (ActiveRecord: 2.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"11"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 20ms (ActiveRecord: 1.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mTodo Load (9.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 50ms (ActiveRecord: 9.6ms)
+
+
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mTodo Load (12.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 27ms (ActiveRecord: 12.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=11:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (9.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 12ms (ActiveRecord: 9.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+  [1m[36mTodo Load (2.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 45ms (ActiveRecord: 2.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:31 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mTodo Load (3.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 3.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 25ms (ActiveRecord: 0.8ms)
+
+
+  [1m[36mTodo Load (9.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 13ms (ActiveRecord: 9.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (39.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 42ms (ActiveRecord: 39.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (11.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 14ms (ActiveRecord: 11.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (14.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 14.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/4" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"4"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mTodo Load (4.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 10ms (ActiveRecord: 4.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (13.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 13.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/6" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (12.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 12.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (28.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 41ms (ActiveRecord: 28.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=4:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"6"}
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/8" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"11"}
+Completed 404 Not Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (13.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 13.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=11:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (13.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 13.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=8:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=6:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"14"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mTodo Load (2.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 2.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 2.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (11.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 11.2ms)
+
+
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (2.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 2.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 1.4ms)
+
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Started DELETE "/api/todos/6" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 8ms (ActiveRecord: 1.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (22.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 25ms (ActiveRecord: 22.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/4" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"4"}
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (4.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 12ms (ActiveRecord: 4.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=4:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 14ms (ActiveRecord: 1.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 31ms (ActiveRecord: 2.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (12.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 12.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=6:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"11"}
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mTodo Load (5.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 8ms (ActiveRecord: 5.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=11:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mTodo Load (15.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 19ms (ActiveRecord: 15.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (14.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 14.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (1.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 1.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 0.4ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 34ms (ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (21.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 28ms (ActiveRecord: 21.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mTodo Load (2.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 2.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (7.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Completed 404 Not Found in 21ms (ActiveRecord: 7.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Completed 404 Not Found in 15ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (3.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 21ms (ActiveRecord: 1.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 3.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/6" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (30.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+Completed 404 Not Found in 39ms (ActiveRecord: 30.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  Parameters: {"id"=>"6"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=6:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (3.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 3.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+Processing by Api::TodosController#destroy as JSON
+  [1m[36mTodo Load (4.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"14"}
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 11ms (ActiveRecord: 4.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"13"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (11.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 11.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"11"}
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (48.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 55ms (ActiveRecord: 48.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mTodo Load (2.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 20ms (ActiveRecord: 2.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=11:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mTodo Load (9.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 9.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (12.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+Completed 404 Not Found in 14ms (ActiveRecord: 12.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  Parameters: {"id"=>"16"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:32 -0800
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 25ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (14.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 40ms (ActiveRecord: 14.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (17.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 45ms (ActiveRecord: 17.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (2.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 79ms (ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/11" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"11"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (2.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 2.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=11:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (12.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 14ms (ActiveRecord: 12.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (25.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 33ms (ActiveRecord: 25.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (2.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 2.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 20ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 1.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mTodo Load (3.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 24ms (ActiveRecord: 3.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (3.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  [1m[36mTodo Load (2.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 3.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 26ms (ActiveRecord: 2.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  Parameters: {"id"=>"14"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 13ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (9.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 24ms (ActiveRecord: 9.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 40ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mTodo Load (3.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 3.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (8.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 19ms (ActiveRecord: 1.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 39ms (ActiveRecord: 8.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (5.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 5.8ms)
+
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/14" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (3.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Completed 404 Not Found in 19ms (ActiveRecord: 3.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 1.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"23"}
+  [1m[36mTodo Load (12.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 12.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (16.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 45ms (ActiveRecord: 16.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"14"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mTodo Load (2.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=14:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (15.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 19ms (ActiveRecord: 15.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (3.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 3.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Completed 404 Not Found in 6ms (ActiveRecord: 1.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (10.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 10.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (15.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 15.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"12"}
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 1.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (17.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 21ms (ActiveRecord: 17.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/15" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"15"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 1.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  Parameters: {"id"=>"7"}
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (24.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 59ms (ActiveRecord: 24.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=15:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (40.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 72ms (ActiveRecord: 40.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (20.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 42ms (ActiveRecord: 20.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mTodo Load (3.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 3.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (14.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 23ms (ActiveRecord: 14.1ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Started DELETE "/api/todos/12" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (9.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 11ms (ActiveRecord: 9.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (39.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 69ms (ActiveRecord: 39.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  [1m[36mTodo Load (3.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 3.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Processing by Api::TodosController#destroy as JSON
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (9.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 9.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Parameters: {"id"=>"12"}
+  [1m[36mTodo Load (18.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 25ms (ActiveRecord: 18.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 40ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:33 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mTodo Load (8.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Completed 404 Not Found in 26ms (ActiveRecord: 8.5ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=12:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (16.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 34ms (ActiveRecord: 16.6ms)
+
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (13.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 29ms (ActiveRecord: 13.5ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  Parameters: {"id"=>"22"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Processing by Api::TodosController#destroy as JSON
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (2.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 8ms (ActiveRecord: 2.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  Parameters: {"id"=>"24"}
+Completed 404 Not Found in 15ms (ActiveRecord: 0.7ms)
+
+
+  [1m[36mTodo Load (2.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 12ms (ActiveRecord: 2.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/13" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 1.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"13"}
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  Parameters: {"id"=>"17"}
+  [1m[36mTodo Load (19.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 38ms (ActiveRecord: 19.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 10ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (16.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 27ms (ActiveRecord: 16.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=13:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (2.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 11ms (ActiveRecord: 2.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (19.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 26ms (ActiveRecord: 19.6ms)
+
+
+  [1m[36mTodo Load (46.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 48ms (ActiveRecord: 46.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  Parameters: {"id"=>"23"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (3.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 1.3ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 3.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/16" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 30ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mTodo Load (7.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mTodo Load (8.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 13ms (ActiveRecord: 8.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=16:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (8.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 8.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 69ms (ActiveRecord: 7.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (3.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 1.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 12ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (3.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 31ms (ActiveRecord: 3.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Completed 404 Not Found in 7ms (ActiveRecord: 3.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 1.5ms)
+
+
+  [1m[36mTodo Load (4.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 14ms (ActiveRecord: 4.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/17" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  Parameters: {"id"=>"7"}
+Processing by Api::TodosController#destroy as JSON
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Parameters: {"id"=>"17"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 1.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (7.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 7.1ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=17:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Completed 404 Not Found in 5ms (ActiveRecord: 1.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 2.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (4.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 4.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 1.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (8.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 30ms (ActiveRecord: 8.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.7ms)
+
+
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 20ms (ActiveRecord: 1.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (7.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 21ms (ActiveRecord: 7.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Completed 404 Not Found in 14ms (ActiveRecord: 2.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mTodo Load (4.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (1.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 4.7ms)
+
+
+Processing by Api::TodosController#destroy as JSON
+Started DELETE "/api/todos/19" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"19"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 1.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"18"}
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=19:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (7.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 7.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 4ms (ActiveRecord: 2.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+  [1m[36mTodo Load (2.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  [1m[36mTodo Load (21.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Parameters: {"id"=>"25"}
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/18" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (8.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 404 Not Found in 30ms (ActiveRecord: 21.8ms)
+
+
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"18"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 37ms (ActiveRecord: 8.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 10ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=18:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  ↳ app/controllers/api/todos_controller.rb:30
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (4.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 4.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Completed 404 Not Found in 42ms (ActiveRecord: 1.3ms)
+
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  Parameters: {"id"=>"23"}
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+  [1m[36mTodo Load (7.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 17ms (ActiveRecord: 7.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 10ms (ActiveRecord: 1.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 19ms (ActiveRecord: 1.5ms)
+
+
+  [1m[36mTodo Load (3.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+Completed 404 Not Found in 12ms (ActiveRecord: 3.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"20"}
+Started DELETE "/api/todos/22" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (2.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 2.2ms)
+
+
+  [1m[36mTodo Load (3.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 10ms (ActiveRecord: 3.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"22"}
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  [1m[36mTodo Load (2.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Completed 404 Not Found in 8ms (ActiveRecord: 2.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=22:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+  Parameters: {"id"=>"7"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mTodo Load (2.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mTodo Load (3.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 3.0ms)
+
+
+Started DELETE "/api/todos/20" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 15ms (ActiveRecord: 1.4ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:30
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"20"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 19ms (ActiveRecord: 2.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (6.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 404 Not Found in 14ms (ActiveRecord: 1.5ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 18ms (ActiveRecord: 6.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=20:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (6.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 9ms (ActiveRecord: 6.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Completed 404 Not Found in 11ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 8ms (ActiveRecord: 2.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (3.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 16ms (ActiveRecord: 3.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/21" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"21"}
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 7ms (ActiveRecord: 2.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 12ms (ActiveRecord: 2.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 28ms (ActiveRecord: 1.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=21:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (3.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/24" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"23"}
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 6ms (ActiveRecord: 2.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:34 -0800
+Completed 404 Not Found in 27ms (ActiveRecord: 3.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  Parameters: {"id"=>"25"}
+Processing by Api::TodosController#destroy as JSON
+Started DELETE "/api/todos/23" for 127.0.0.1 at 2018-12-04 15:45:35 -0800
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 1.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (2.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mTodo Load (6.9ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Processing by Api::TodosController#destroy as JSON
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:35 -0800
+Completed 404 Not Found in 11ms (ActiveRecord: 6.9ms)
+
+
+  ↳ app/controllers/api/todos_controller.rb:30
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:35 -0800
+  Parameters: {"id"=>"23"}
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+Completed 404 Not Found in 21ms (ActiveRecord: 2.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=24:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 13ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=23:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:35 -0800
+  [1m[36mTodo Load (8.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Started DELETE "/api/todos/25" for 127.0.0.1 at 2018-12-04 15:45:35 -0800
+  ↳ app/controllers/api/todos_controller.rb:30
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  Parameters: {"id"=>"7"}
+Completed 404 Not Found in 14ms (ActiveRecord: 8.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+  [1m[36mTodo Load (4.7ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[36mTodo Load (6.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 10ms (ActiveRecord: 6.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Completed 404 Not Found in 7ms (ActiveRecord: 4.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=25:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started DELETE "/api/todos/7" for 127.0.0.1 at 2018-12-04 15:45:35 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mTodo Load (8.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+Completed 404 Not Found in 11ms (ActiveRecord: 8.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Todo with 'id'=7:
+  app/controllers/api/todos_controller.rb:30:in `destroy'
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:45:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 783ms (Views: 771.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:45:57 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:48:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:48:00 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:48:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 753ms (Views: 737.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:48:47 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:49:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 667ms (Views: 657.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:49:10 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:49:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 117ms (Views: 96.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:49:43 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:50:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 724ms (Views: 718.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:50:07 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:51:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 793ms (Views: 777.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:51:07 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:51:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 763ms (Views: 759.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:51:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 534ms (Views: 528.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:51:31 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:51:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 663ms (Views: 660.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:51:44 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:51:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 633ms (Views: 630.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:51:58 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Suit Up"], ["body", "Chuck Norris doesn't use a computer because a computer does everything slower than Chuck Norris."], ["done", false], ["created_at", "2018-12-04 23:55:21.721294"], ["updated_at", "2018-12-04 23:55:21.721294"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Challenege Accepted"], ["body", "Chuck Norris can recite π. Backwards."], ["done", false], ["created_at", "2018-12-04 23:55:21.750120"], ["updated_at", "2018-12-04 23:55:21.750120"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Lawyered"], ["body", "Chuck Norris's first program was kill -9."], ["done", false], ["created_at", "2018-12-04 23:55:21.752834"], ["updated_at", "2018-12-04 23:55:21.752834"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Wait For it"], ["body", "Chuck Norris can write multi-threaded applications with a single thread."], ["done", false], ["created_at", "2018-12-04 23:55:21.756087"], ["updated_at", "2018-12-04 23:55:21.756087"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Legendary"], ["body", "Chuck Norris' beard is immutable."], ["done", false], ["created_at", "2018-12-04 23:55:21.758920"], ["updated_at", "2018-12-04 23:55:21.758920"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Patent Pending"], ["body", "Whiteboards are white because Chuck Norris scared them that way."], ["done", false], ["created_at", "2018-12-04 23:55:21.761432"], ["updated_at", "2018-12-04 23:55:21.761432"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "But… umm"], ["body", "There is nothing regular about Chuck Norris' expressions."], ["done", false], ["created_at", "2018-12-04 23:55:21.763913"], ["updated_at", "2018-12-04 23:55:21.763913"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Lawyered"], ["body", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["done", true], ["created_at", "2018-12-04 23:55:21.766826"], ["updated_at", "2018-12-04 23:55:21.766826"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "What Up"], ["body", "Chuck Norris's keyboard doesn't have a Ctrl key because nothing controls Chuck Norris."], ["done", true], ["created_at", "2018-12-04 23:55:21.769443"], ["updated_at", "2018-12-04 23:55:21.769443"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "True Story"], ["body", "Whiteboards are white because Chuck Norris scared them that way."], ["done", false], ["created_at", "2018-12-04 23:55:21.772217"], ["updated_at", "2018-12-04 23:55:21.772217"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:56:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 94ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:56:16 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 41ms (Views: 16.5ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:56:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 130ms (Views: 120.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:56:58 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/todos/35" for 127.0.0.1 at 2018-12-04 15:57:03 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"35"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:33
+  [1m[36mTodo Destroy (0.5ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 35]]
+  ↳ app/controllers/api/todos_controller.rb:33
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:33
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:57:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:57:31 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/todos/34" for 127.0.0.1 at 2018-12-04 15:57:34 -0800
+Processing by Api::TodosController#destroy as JSON
+  Parameters: {"id"=>"34"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:33
+  [1m[36mTodo Destroy (0.7ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 34]]
+  ↳ app/controllers/api/todos_controller.rb:33
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:33
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 15:59:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 396ms (Views: 378.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 15:59:53 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 16:05:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 640ms (Views: 630.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 16:05:28 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (4.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 20ms (Views: 6.2ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 16:13:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 739ms (Views: 727.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2018-12-04 16:13:23 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:4
+Completed 200 OK in 27ms (Views: 14.1ms | ActiveRecord: 11.5ms)
+
+
+Started PATCH "/api/todos/26" for 127.0.0.1 at 2018-12-04 16:13:26 -0800
+Processing by Api::TodosController#update as JSON
+  Parameters: {"todo"=>{"done"=>"true"}, "id"=>"26"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/todos_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:22
+  [1m[36mTodo Update (25.6ms)[0m  [1m[33mUPDATE "todos" SET "done" = $1, "updated_at" = $2 WHERE "todos"."id" = $3[0m  [["done", true], ["updated_at", "2018-12-05 00:13:26.291495"], ["id", 26]]
+  ↳ app/controllers/api/todos_controller.rb:22
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:22
+Completed 200 OK in 63ms (Views: 0.5ms | ActiveRecord: 52.0ms)
+
+

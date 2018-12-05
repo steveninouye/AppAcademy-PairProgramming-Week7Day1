@@ -15,7 +15,11 @@ class TodoList extends React.Component {
       {errors.map((err,i) => <p key={i}>{err}</p>)}
       <TodoForm createTodo={this.props.createTodo} />
       <ul>
-        { this.props.todos.map(todo => <TodoListItem key={todo.id} todo={todo}/>)}
+        { this.props.todos.map(todo => <TodoListItem
+                                          key={todo.id}
+                                          deleteTodo={this.props.deleteTodo}
+                                          updateTodo={this.props.updateTodo}  
+                                          todo={todo}/>)}
       </ul>
       </>
     )
